@@ -1,14 +1,84 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Información de Dispositivo
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
+  <h3>Método 1: UniqueDeviceID</h3>
+  <i></i>
   <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+    <b>UniqueDeviceID:</b> {{UniqueDeviceID}}
+  </p>
+  <hr>
+  <h3>Método 2: Sim</h3>
+  <p>
+    <b>JSON Response:</b> {{json_sim}}
+  </p>
+  <p>
+    <b>HasReadPermission:</b> {{Sim['read_permission']}}
+  </p>
+  <p>
+    <b>Country:</b> {{Sim['pais']}}
+  </p>
+  <p>
+    <b>Provider:</b> {{Sim['compania']}}
+  </p>
+
+  <h3>Método 3: Device</h3>
+  <p>
+    <b>JSON Response:</b> {{json_device}}
+  </p>
+  <!-- <p>
+    <b>Cordova:</b> {{device_info['cordova']}}
+  </p> -->
+  <p>
+    <b>Model:</b> {{device_info['model']}}
+  </p>
+  <p>
+    <b>Platform:</b> {{device_info['platform']}}
+  </p>
+  <p>
+    <b>UUID:</b> {{device_info['uuid']}}
+    <br>
+    <i>The details of how a UUID is generated are determined by the device manufacturer and are specific to the device's platform
+      or model.</i>
+  </p>
+  <p>
+    <b>Version:</b> {{device_info['version']}}
+  </p>
+  <p>
+    <b>Manufacturer:</b> {{device_info['manufacturer']}}
+  </p>
+  <!-- <p>
+    <b>isVirtual:</b> {{device_info['is_virtual']}}
+  </p> -->
+  <p>
+    <b>Serial:</b> {{device_info['serial']}}
+  </p>
+
+  <h3>Método 4: Uid</h3>
+  <p>Get unique identifiers: UUID, IMEI, IMSI, ICCID and MAC.</p>
+  <p>
+    <b>UUID</b>
+    <i>(Android only)</i>: {{uid_info['uuid']}}
+  </p>
+  <p>
+    <b>IMEI</b>
+    <i>(Android only)</i>: {{uid_info['imei']}}
+  </p>
+  <p>
+    <b>IMSI</b>
+    <i>(Android only)</i>: {{uid_info['imsi']}}
+  </p>
+  <p>
+    <b>ICCID:</b> {{uid_info['iccid']}}
+    <br>
+    <i>Combination of carrierName, mobileCountryCode and mobileNetworkCode</i>
+  </p>
+  <p>
+    <b>MAC:</b> {{uid_info['mac']}}
   </p>
 </ion-content>
